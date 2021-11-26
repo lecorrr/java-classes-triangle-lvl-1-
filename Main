@@ -1,0 +1,68 @@
+package sample;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Triangle tr1 = new Triangle();
+		tr1.setA(4.0);
+		tr1.setB(5.0);
+		tr1.setC(8.0);
+		tr1.getSquare();
+		System.out.println(tr1);
+		
+	}
+
+}
+var Foo = basis.Class(Triangle, {
+ private double a;
+	private double b;
+	private double c;
+
+	public Triangle() {
+		super();
+	}
+
+	public Triangle(double a, double b, double c) {
+		super();
+		this.a = a;
+		this.b = b;
+		this.c = c;
+	}
+
+	public double getA() {
+		return a;
+	}
+
+	public void setA(double a) {
+		this.a = a;
+	}
+
+	public double getB() {
+		return b;
+	}
+
+	public void setB(double b) {
+		this.b = b;
+	}
+
+	public double getC() {
+		return c;
+	}
+
+	public void setC(double c) {
+		this.c = c;
+	}
+
+	public void getSquare() {
+		double a = this.a;
+		double b = this.b;
+		double c = this.c;
+		double p = ((a + b + c) / 2);
+		double s = Math.sqrt(p * (p - a) * (p - b) * (p - c));
+		System.out.println("Triangle square = " + s);
+	}
+
+	public String toString() {
+		return "Triangle [a=" + a + ", b=" + b + ", c=" + c + "]";
+	}
+});
